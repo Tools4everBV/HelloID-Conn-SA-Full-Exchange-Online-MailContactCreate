@@ -21,7 +21,6 @@ $tmpName = @'
 AADExchangeAppID
 '@ 
 $tmpValue = @'
-f8f7821c-7a40-4882-8db2-3120a7bc69ed
 '@ 
 $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
 
@@ -30,25 +29,14 @@ $tmpName = @'
 AADExchangeOrganization
 '@ 
 $tmpValue = @'
-vecozo.onmicrosoft.com
 '@ 
 $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
 
-#Global variable #3 >> AADAppId
-$tmpName = @'
-AADAppId
-'@ 
-$tmpValue = @'
-9cd86558-ca5f-41db-a5e4-8bcf493c0ac0
-'@ 
-$globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
-
-#Global variable #4 >> AADExchangeCertificateThumbprint
+#Global variable #3 >> AADExchangeCertificateThumbprint
 $tmpName = @'
 AADExchangeCertificateThumbprint
 '@ 
 $tmpValue = @'
-C1CA4CF24346EE34E6ADB5231446B8C1021362D6
 '@ 
 $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
 
