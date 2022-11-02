@@ -1,0 +1,204 @@
+[
+    {
+        "label":  "Details",
+        "fields":  [
+                       {
+                           "key":  "externalEmailAddress",
+                           "templateOptions":  {
+                                                   "label":  "External Email Address",
+                                                   "placeholder":  "j.doe@gmail.com",
+                                                   "required":  true,
+                                                   "useDataSource":  false,
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_0",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "displayField":  "test"
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "emailUniqueBool",
+                           "templateOptions":  {
+                                                   "label":  "Emailaddress available?",
+                                                   "useSwitch":  true,
+                                                   "checkboxLabel":  "Yes",
+                                                   "useDataSource":  true,
+                                                   "mustBeTrue":  true,
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_1",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "emailaddress",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "externalEmailAddress"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "displayField":  "Result"
+                                               },
+                           "type":  "boolean",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "emailUniqueInfo",
+                           "templateOptions":  {
+                                                   "label":  "Info",
+                                                   "rows":  3,
+                                                   "useDataSource":  true,
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_2",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+                                                                                                                 {
+                                                                                                                     "propertyName":  "EmailAddress",
+                                                                                                                     "otherFieldValue":  {
+                                                                                                                                             "otherFieldKey":  "externalEmailAddress"
+                                                                                                                                         }
+                                                                                                                 }
+                                                                                                             ]
+                                                                                      }
+                                                                        },
+                                                   "displayField":  "Result",
+                                                   "placeholder":  "Loading..."
+                                               },
+                           "hideExpression":  "!model[\"externalEmailAddress\"]",
+                           "className":  "textarea-resize-vert",
+                           "type":  "textarea",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "displayName",
+                           "templateOptions":  {
+                                                   "label":  "Display name",
+                                                   "placeholder":  "John Doe",
+                                                   "required":  true,
+                                                   "minLength":  2
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "alias",
+                           "templateOptions":  {
+                                                   "label":  "Alias",
+                                                   "placeholder":  "johndoe",
+                                                   "required":  true,
+                                                   "minLength":  2,
+                                                   "pattern":  "^[a-zA-Z0-9_.!#$%\u0026\u0027*+-\\/=?^_`{|}~]*$"
+                                               },
+                           "validation":  {
+                                              "messages":  {
+                                                               "pattern":  "Valid values are: Strings formed with characters from A to Z (uppercase or lowercase), digits from 0 to 9, !, #, $, %, \u0026, \u0027, *, +, -, /, =, ?, ^, _, `, {, |, } or ~"
+                                                           }
+                                          },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "firstName",
+                           "templateOptions":  {
+                                                   "label":  "First name"
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "initials",
+                           "templateOptions":  {
+                                                   "label":  "Initials"
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "lastName",
+                           "templateOptions":  {
+                                                   "label":  "Last name"
+                                               },
+                           "type":  "input",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       },
+                       {
+                           "key":  "hideFromAddressLists",
+                           "templateOptions":  {
+                                                   "label":  "Hide from Address Lists",
+                                                   "useSwitch":  true,
+                                                   "checkboxLabel":  "Hide from Address Lists"
+                                               },
+                           "type":  "boolean",
+                           "summaryVisibility":  "Show",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       }
+                   ]
+    },
+    {
+        "label":  "Groups",
+        "fields":  [
+                       {
+                           "key":  "multiselectGroups",
+                           "templateOptions":  {
+                                                   "label":  "Exchange Groups",
+                                                   "useObjects":  false,
+                                                   "useFilter":  true,
+                                                   "options":  [
+                                                                   "Option 1",
+                                                                   "Option 2",
+                                                                   "Option 3"
+                                                               ],
+                                                   "useDataSource":  true,
+                                                   "valueField":  "id",
+                                                   "textField":  "name",
+                                                   "dataSourceConfig":  {
+                                                                            "dataSourceGuid":  "$dataSourceGuid_3",
+                                                                            "input":  {
+                                                                                          "propertyInputs":  [
+
+                                                                                                             ]
+                                                                                      }
+                                                                        }
+                                               },
+                           "type":  "multiselect",
+                           "summaryVisibility":  "Show",
+                           "textOrLabel":  "text",
+                           "requiresTemplateOptions":  true,
+                           "requiresKey":  true,
+                           "requiresDataSource":  false
+                       }
+                   ]
+    }
+]
